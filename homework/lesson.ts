@@ -1,6 +1,6 @@
 import Currency from './source.js';
 
-const instance = new Currency(200, { separator: '2' });
+const instance = new Currency(200);
 
 console.log(instance.dollars());
 console.log(instance.add(100));

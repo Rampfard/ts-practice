@@ -9,13 +9,21 @@ export interface Defaults {
 	negativePattern?: string;
 }
 
+export interface Settings extends Defaults {
+	useVedic?: boolean;
+	increment?: number;
+	groups?: RegExp;
+}
+
 export type NumberFn = (v: number, i?: number) => number;
 
 export default class Currency {
-	value: number | string | Currency;
-	opts: Defaults;
+	readonly value: number | string | Currency;
+	readonly opts: Settings;
+	private _settings: Settings;
+	private _precision: number;
 
-	constructor(value: number | string | Currency, opts?: Defaults) {
+	constructor(value: number | string | Currency, opts?: Settings) {
 		this.value = value;
 		this.opts = opts;
 	}

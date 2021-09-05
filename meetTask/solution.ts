@@ -8,7 +8,7 @@ const groupBy: GroupBy = <T>(arr: T[], cb: (el: T) => string | number) => {
 
 	for (let item of arr) {
 		const key = cb(item);
-		obj[key] = [...arr.filter((el) => cb(el) === key)];
+		obj[key] = arr.filter((el) => cb(el) === key);
 	}
 
 	return obj;

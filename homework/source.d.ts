@@ -59,8 +59,8 @@ export default class Currency {
 	multiply(number: number): Currency;
 
 	// Вот тут не ясно, в jsdocs к библиотеке в return указано что возвращается массив Currency экземпляров.
-	// Да и в консоле там масив из экземпляров Currency, поэтому возвращаемое значение указано как Currency[]; 
-	divide(number): Currency[];
+	// Да и в консоле там масив из экземпляров Currency, поэтому возвращаемое значение указано как Currency[];
+	divide(number: number): Currency[];
 
 	distribute(count: number): Currency[];
 
@@ -71,7 +71,6 @@ export default class Currency {
 	format(useSymbol: boolean): string;
 
 	toString(): string;
-
 
 	// number в JSON. Зачем не понятно, логично же что тут ожидается операция JSON.stringify() которая вернёт строку.
 	// Но автор указал что возвращается number. А именно this.value что и есть number.
